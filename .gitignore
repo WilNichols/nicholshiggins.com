@@ -1,0 +1,16 @@
+/node_modules
+/.env
+/.DS_Store
+/_tmp
+/_site/assets
+/_site/baratza-encore
+/_site/floral-mug
+/_site/ikea-aluminum-espresso-cups
+/_site/illy-espresso-cups
+/_site/index.html
+/_site/mid-century-34-console-acorn
+/_site/mid-century-38-bookshelf-wide-tower-acorn
+/_site/mid-century-bar-cart-walnut
+/_site/patterned-coffee-cups
+/_site/single-pour-over
+/_site/src

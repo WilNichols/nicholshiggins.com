@@ -1,0 +1,22 @@
+@use 'tokens';
+
+@include tokens.textStyles;
+
+body {
+  font-size: var(--type-0);
+  line-height: tokens.$gapSmall;
+  @extend %font--text-regular;
+  color: var(--contentPrimaryColor);
+  padding: var(--col);
+  background-color: Canvas;
+}
+
+.page {
+  // display: grid;
+  width: auto;
+  row-gap: tokens.$gapSmall;
+  column-gap: tokens.$gapMedium;
+  @media (width <= tokens.$breakpoint) {
+    align-content: start;
+  }
+}

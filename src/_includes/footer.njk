@@ -1,0 +1,5 @@
+{% macro Footer(el="div", class="page__footer", classModifier="") -%}
+  <{{ el }} class="{{ class }}{% if classModifier %} {{ class }}--{{ classModifier }}{% endif %}">
+   <span class="footer__separator">|</span> <a href="mailto:{{ meta.contact.email }}">Email</a> <span class="footer__separator">|</span> <a href="https://people.pledge.party" target="blank">The People Pledge</a></span>
+  </{{ el }}>
+{%- endmacro %}

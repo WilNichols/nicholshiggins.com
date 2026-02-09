@@ -1,0 +1,302 @@
+@use "sass:color";
+@use "sass:math";
+@use "sass:string";
+
+$-color-literals: (
+  A05: #000504,
+  A10: #001408,
+  A15: #001c16,
+  A20: #002925,
+  A25: #00362e,
+  A30: #004537,
+  A35: #005540,
+  A40: #006649,
+  A45: #007b58,
+  A50: #009168,
+  A55: #1cad80,
+  A60: #38c999,
+  A65: #60d7ad,
+  A70: #8ae6c2,
+  A75: #a4efd0,
+  A80: #c0fae0,
+  A85: #ccfce4,
+  A90: #d9ffea,
+  A95: #e9fff2,
+  B05: #000616,
+  B10: #000f38,
+  B15: #001851,
+  B20: #00246b,
+  B25: #002d82,
+  B30: #003899,
+  B35: #0046ac,
+  B40: #0056bf,
+  B45: #0e6bd1,
+  B50: #1b82e3,
+  B55: #3e9ef1,
+  B60: #61bcff,
+  B65: #81cbff,
+  B70: #a1dcff,
+  B75: #bae4ff,
+  B80: #d4eeff,
+  B85: #e0f3ff,
+  B90: #edfaff,
+  B95: #f7fdff,
+  G05: #000501,
+  G10: #001203,
+  G15: #001e06,
+  G20: #002708,
+  G25: #002d0a,
+  G30: #00380c,
+  G35: #004d0a,
+  G40: #00630a,
+  G45: #0a7600,
+  G50: #0a8a00,
+  G55: #28a908,
+  G60: #3dc910,
+  G65: #64d441,
+  G70: #8ce074,
+  G75: #a5ea8e,
+  G80: #bff5a9,
+  G85: #cef9bd,
+  G90: #ddffd2,
+  G95: #eeffe9,
+  K0: #000000,
+  K05: #030405,
+  K10: #0d1014,
+  K15: #171b21,
+  K20: #232934,
+  K25: #313742,
+  K30: #3b414c,
+  K35: #454b57,
+  K40: #4f5561,
+  K45: #606672,
+  K50: #717783,
+  K55: #848a96,
+  K60: #979da8,
+  K65: #b9bfca,
+  K70: #ced2db,
+  K75: #dcdfe6,
+  K80: #e3e6ed,
+  K85: #e9ecf3,
+  K90: #f2f4f7,
+  K95: #f9f9fb,
+  K100: #ffffff,
+  M05: #140018,
+  M10: #21002a,
+  M15: #32013f,
+  M20: #470257,
+  M25: #59056b,
+  M30: #6c0a80,
+  M35: #801496,
+  M40: #961fad,
+  M45: #b12dcb,
+  M50: #ce3deb,
+  M55: #dc54f5,
+  M60: #eb6bff,
+  M65: #f08cff,
+  M70: #f7adff,
+  M75: #f8c0ff,
+  M80: #fcd4ff,
+  M85: #fce1ff,
+  M90: #fef0ff,
+  M95: #fff8ff,
+  O05: #0b0300,
+  O10: #160400,
+  O15: #220700,
+  O20: #370d00,
+  O25: #5b1800,
+  O30: #852600,
+  O35: #a23500,
+  O40: #bf4600,
+  O45: #dc5a00,
+  O50: #fa7000,
+  O55: #fc8730,
+  O60: #ffa061,
+  O65: #ffad75,
+  O70: #ffbd8a,
+  O75: #ffcca5,
+  O80: #ffdec2,
+  O85: #ffe5ce,
+  O90: #ffeedb,
+  O95: #fff7ed,
+  R05: #080001,
+  R10: #0f0002,
+  R15: #1b0001,
+  R20: #2f0002,
+  R25: #490001,
+  R30: #660001,
+  R35: #8a0000,
+  R40: #b00001,
+  R45: #c9140a,
+  R50: #e32814,
+  R55: #f1413a,
+  R60: #ff5c61,
+  R65: #ff7a80,
+  R70: #ff99a0,
+  R75: #ffb0b5,
+  R80: #ffc7cb,
+  R85: #ffd8db,
+  R90: #ffebed,
+  R95: #fff5f6,
+  T05: #00090e,
+  T10: #001829,
+  T15: #00223b,
+  T20: #002f53,
+  T25: #014579,
+  T30: #035391,
+  T35: #0768aa,
+  T40: #0c7dc4,
+  T45: #1a91d3,
+  T50: #29a6e4,
+  T55: #4cbcf1,
+  T60: #70d4ff,
+  T65: #90e1ff,
+  T70: #b3f0ff,
+  T75: #c5f5ff,
+  T80: #d9fcff,
+  T85: #defcff,
+  T90: #e6feff,
+  T95: #f1ffff,
+  V05: #080024,
+  V10: #15034a,
+  V15: #1c0362,
+  V20: #25077a,
+  V25: #310e93,
+  V30: #3d17ae,
+  V35: #4c24c0,
+  V40: #5b32d4,
+  V45: #6c44e0,
+  V50: #7e58ed,
+  V55: #9270f6,
+  V60: #a88bff,
+  V65: #bca6ff,
+  V70: #d1c2ff,
+  V75: #dcd0ff,
+  V80: #e8e0ff,
+  V85: #ede7ff,
+  V90: #f4f0ff,
+  V95: #f9f7ff,
+  Y05: #0c0500,
+  Y10: #1b0a00,
+  Y15: #2d1200,
+  Y20: #4d2100,
+  Y25: #763600,
+  Y30: #944700,
+  Y35: #b25b00,
+  Y40: #d17000,
+  Y45: #e5840a,
+  Y50: #fa9913,
+  Y55: #fcae3f,
+  Y60: #ffc46b,
+  Y65: #ffd289,
+  Y70: #ffe2a8,
+  Y75: #ffeabc,
+  Y80: #fff3d1,
+  Y85: #fff5dc,
+  Y90: #fff9e8,
+  Y95: #fffcf4
+);
+
+// Remap RGB from [0,255]*3 -> [30,255], [31,255], [32,255].
+// This is the macOS window bg color I get when setting windows to not tint from my wallpaper in the dark theme, and I assume about the rgb value for color spec 4 canvas.
+@function -color-adjust($c) {
+  $r: color.channel($c, "red",   $space: rgb);
+  $g: color.channel($c, "green", $space: rgb);
+  $b: color.channel($c, "blue",  $space: rgb);
+
+  $r2: math.round(30 + math.div($r, 255) * 225);
+  $g2: math.round(31 + math.div($g, 255) * 224);
+  $b2: math.round(32 + math.div($b, 255) * 223);
+
+  @return rgb($r2, $g2, $b2);
+}
+
+// Alpha → 0 approaching white. Light theme precalculated transparencies.
+@function -alpha-toward-white($c) {
+  $a: math.div(
+    color.channel($c, "red",   $space: rgb) * 0.2126 +
+    color.channel($c, "green", $space: rgb) * 0.7152 +
+    color.channel($c, "blue",  $space: rgb) * 0.0722,
+    255
+  );
+
+  @return color.change($c, $alpha: 1 - $a);
+}
+
+// Alpha → 0 approaching black. Dark OLED theme precalc transparencies.
+@function -alpha-toward-black($c) {
+  $a: math.div(
+    color.channel($c, "red",   $space: rgb) * 0.2126 +
+    color.channel($c, "green", $space: rgb) * 0.7152 +
+    color.channel($c, "blue",  $space: rgb) * 0.0722,
+    255
+  );
+
+  @return color.change($c, $alpha: $a);
+}
+
+// Alpha → 0 approaching (30,31,32). Dark desktop precalc.
+@function -alpha-toward-adjusted-black($c) {
+  $r: color.channel($c, "red",   $space: rgb);
+  $g: color.channel($c, "green", $space: rgb);
+  $b: color.channel($c, "blue",  $space: rgb);
+
+  $a: math.max(0,
+    math.min(
+      1,
+      math.div($r - 30, 225),
+      math.div($g - 31, 224),
+      math.div($b - 32, 223)
+    )
+  );
+
+  @return color.change($c, $alpha: $a);
+}
+
+@mixin colorLiterals {
+  /* Custom prop guide
+    --cK50: medium gray
+    --cK50W: medium gray transparent against white
+    --cKD50: medium gray for the dark theme, either the same against black as white, or adjusted for desktop against rgb(30, 31, 32)
+    --cKD50B: transparent medium gray for the dark theme against black for mobile or desktop against rgb(30, 31, 32)
+  */
+  // this outputs so many more than are used, but will be cleaned up by postCSS
+  & {
+    @each $base, $val in $-color-literals {
+      $hue: string.slice($base, 1, 1);
+      $num: string.slice($base, 2, -1);
+      $c: $val;
+      // Original colors
+      --c#{$hue}#{$num}: #{$val};
+      // Original transparent -> white
+      --c#{$hue}#{$num}W: #{-alpha-toward-white($c)};
+      // Adjusted solid
+      $adj: -color-adjust($c);
+      --c#{$hue}d#{$num}: #{$adj};
+      // Original transparent -> black
+      --c#{$hue}#{$num}B: #{-alpha-toward-black($c)};
+      // Adjusted transparent -> (30, 31, 32)
+      --c#{$hue}d#{$num}B: #{-alpha-toward-adjusted-black($adj)};
+
+      // Adaptive vars: default (pointer/desktop)
+      --c#{$hue}D#{$num}: var(--c#{$hue}d#{$num});
+      --c#{$hue}D#{$num}B: var(--c#{$hue}d#{$num}B);
+    }
+  }
+
+  @at-root {
+    // I want to switch between dark-for-OLED screens, and dark-for-macOS screens. I assume a touchscreen has a dark black point than a cursor device. 
+    @media (pointer: coarse) {
+      #{&} {
+        @each $base, $val in $-color-literals {
+          $hue: string.slice($base, 1, 1);
+          $num: string.slice($base, 2, -1);
+          // if touch screen, cD -> c
+          --c#{$hue}D#{$num}: var(--c#{$hue}#{$num});
+          
+          --c#{$hue}D#{$num}B: var(--c#{$hue}#{$num}B);
+        }
+      }
+    }
+  }
+}

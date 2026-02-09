@@ -1,0 +1,11 @@
+---
+layout: _root.njk
+---
+
+<div class="page page--category">
+  {% if content -%}
+  <div class="about-me">
+    {{ content | safe }}
+  </div>
+  {%- endif %}
+</div>

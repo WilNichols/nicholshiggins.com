@@ -1,0 +1,55 @@
+$width: calc(30 * var(--type-0));
+$breakpoint: 640px;
+$note-title-gap: .25em; // the size of a monospaced space character in Neue Haas Grotesk
+$categoryWidth: 480px;
+$lineHeight: 1px;
+$gapSmall: 1.2em;
+$gapMedium: 2.4em;
+$gapMediumFixed: calc(var(--type-0) * 2.4);
+$cornerOffset: var(--u2);
+$cornerXLarge: 10px;
+$cornerLarge: var(--u8);
+$cornerMedium: var(--u6);
+$cornerSmall: var(--u4);
+
+@mixin sizeAliases {
+  & {
+    // Typography. This isn't _the_ solution — I haven't tried much with fluid scales yet, but it's _a_ solution for now. 
+    /* @link https://utopia.fyi/type/calculator?c=320,17,1.2,1200,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --type--2: clamp(0.7378rem, 0.7152rem + 0.113vi, 0.8rem);
+    --type--1: clamp(0.8854rem, 0.8438rem + 0.2083vi, 1rem);
+    --type-0: clamp(1.0625rem, 0.9943rem + 0.3409vi, 1.25rem);
+    --type-1: clamp(1.275rem, 1.1705rem + 0.5227vi, 1.5625rem);
+    --type-2: clamp(1.53rem, 1.3761rem + 0.7693vi, 1.9531rem);
+    --type-3: clamp(1.836rem, 1.6159rem + 1.1007vi, 2.4414rem);
+    --type-4: clamp(2.2032rem, 1.8946rem + 1.5428vi, 3.0518rem);
+    --type-5: clamp(2.6438rem, 2.2181rem + 2.1288vi, 3.8147rem);
+    // layout
+    --density: 1;
+    --px: calc(1px / var(--density));
+    --col: calc(100dvw/12);
+    // consts
+    --u0: 0;
+    --u1: 1px;
+    --u2: 2px;
+    --u4: 4px;
+    --u6: 6px;
+    --u8: 8px;
+    --u12: 12px;
+    --u16: 16px;
+    --u20: 20px;
+    --u24: 24px;
+    --u32: 32px;
+    --u48: 48px;
+    --u64: 64px;
+    --u96: 96px;
+    --u128: 128px;
+    --u256: 256px;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    --density: 2;
+  }
+  @media (-webkit-min-device-pixel-ratio: 3) {
+    --density: 3;
+  }
+}

@@ -1,0 +1,72 @@
+@use 'sass:math';
+@use '../tokens';
+@use '../mixins';
+
+@include tokens.textStyles;
+
+.posts-list, 
+.about-me, 
+.header, 
+.footer-container {
+  max-width: tokens.$categoryWidth;
+  width: 100%;
+  @media (width <= tokens.$breakpoint) {
+    max-width: unset;
+  }
+}
+
+.posts-list,
+.footer-container {
+  & {
+    display: flex;
+    flex-direction: column;
+    gap: tokens.$gapSmall;
+    width: 100%;
+  }
+  @media (width <= tokens.$breakpoint) {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+.posts-month {
+  display: flex;
+  flex-direction: column;
+  gap: math.div(tokens.$gapSmall, 2);
+  // var passed in from .posts-month in post-list.njk, accounting for z-index view-transition malarky
+  z-index: calc(0 + var(--z-index--modifier, 0));
+}
+
+.posts {
+  & {
+    display: grid;
+    grid-template-columns: min-content auto min-content min-content;
+    row-gap: tokens.$gapSmall;
+    column-gap: tokens.$note-title-gap;
+  }
+  @media(pointer: fine) {
+    row-gap: .6em;
+  }
+}
+
+.footer-container {
+  display: grid;
+  // magic number is trying to figure out what 25px at max type size is proportionately
+  grid-template-columns: calc(2 * var(--type--2)) auto;
+  column-gap: tokens.$note-title-gap;
+}
+
+.page__footer.page__footer--grid {
+  & {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    gap: 5px;
+    margin: unset;
+    max-width: unset;
+    margin-top: math.div(tokens.$gapSmall, 2);
+  }
+  .copyright__text {
+    grid-column: 2 / 3;
+  }
+}
