@@ -10,7 +10,7 @@ $body-gap: 1lh;
 
 @mixin headingStyles {
   @for $i from 1 through 6 {
-    %heading--#{$i} {
+    h#{$i} {
       font-size: var(--type-#{6 - $i});
       @extend %font--display-medium;
     }
@@ -46,16 +46,16 @@ $body-gap: 1lh;
   @include headingStyles;
 
   @for $i from 1 through 6 {
-    .heading--#{$i} {
-      @extend %heading--#{$i};
+    h#{$i} {
+      @extend h#{$i};
       line-height: 1.5em;
       position: relative;
     }
   }
 
-  .heading--1 {
+  h1 {
     line-height: 1em;
-    margin: 0 0 .25em 0;
+    margin: 0;
   }
 
   .page__title {
@@ -63,10 +63,8 @@ $body-gap: 1lh;
     @extend %font--display-medium;
   }
 
-  .page__subtitle {
-    font-size: var(--type--1);
+  h1 + p {
     @extend %font--text-regular;
-    display: block;
     color: var(--contentSecondaryColor);
   }
 }

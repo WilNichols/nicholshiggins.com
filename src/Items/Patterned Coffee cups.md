@@ -4,8 +4,11 @@ Originally Purchased: ""
 Purchase Price: ""
 Original Price: ""
 Asking Price: $15.00
-Photos: "IMG_0317"
-Tags: ["Coffee", "Kitchen"]
+Photos: 
+  - IMG_0317
+tags: 
+  - Dining
+  - Kitchen
 Related Items: ""
 Condition: "Used"
 Dimensions: ""

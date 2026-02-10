@@ -4,8 +4,10 @@ Originally Purchased: ""
 Purchase Price: $150.00
 Original Price: $150.00
 Asking Price: $75.00
-Photos: ["IMG_0323"]
-Tags: ["Coffee", "Kitchen"]
+Photos: 
+  - IMG_0323
+tags: 
+  - Kitchen
 Related Items: ""
 Condition: "Used"
 Dimensions: ""

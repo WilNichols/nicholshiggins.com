@@ -33,7 +33,13 @@
     @include light-dark(--evergreenVersionBackgroundColor, var(--cG40), var(--cGD50));
     @include light-dark(--evergreenVersionBorderColor, var(--cG30), var(--cGD60));
     @include light-dark(--evergreenVersionContentColor, var(--cK100), var(--cKD0));
-    @include light-dark(--edgeColor, var(--cK80), var(--cKD15));
+    @include light-dark(--edgeColor, var(--cK60W), var(--cKD30B));
     @include light-dark(--shadowMultiplier, 1, 2);
+    @include light-dark(--segmenterSelectionHighlight, var(--cK100), var(--cKD40));
+    @include light-dark(--segmenterSelectionGradientTop, var(--cK100), var(--cKD30));
+    @include light-dark(--segmenterSelectionGradientMiddle, var(--cK90W), var(--cKD20B));
+    @include light-dark(--segmenterSelectionGradientEnd, var(--cK95), var(--cKD25));
+    @include light-dark(--segmenterHoverColor, var(--cK70W), var(--cKD25B));
+    @include light-dark(--segmenterActiveColor, var(--cK65W), var(--cKD30B));
   }
 }

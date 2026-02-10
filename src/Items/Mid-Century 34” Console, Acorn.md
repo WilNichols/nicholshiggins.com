@@ -4,8 +4,11 @@ Originally Purchased: 2019-10-05
 Purchase Price: $359.00
 Original Price: $499.00
 Asking Price: $250.00
-Photos: ["IMG_0302", "IMG_0303"]
-Tags: ["Furniture"]
+Photos: 
+  - IMG_0302
+  - IMG_0303
+tags: 
+  - Furniture
 Related Items: ""
 Condition: "Lightly Used"
 Dimensions: "34”w x 12”d x 32”h"

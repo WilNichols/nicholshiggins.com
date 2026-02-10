@@ -2,10 +2,44 @@
 layout: _root.njk
 ---
 
-<div class="page page--category">
+<div class="page page--index">
   {% if content -%}
-  <div class="about-me">
+  <div class="page__intro">
     {{ content | safe }}
   </div>
+  {{ 'test' | log }}
+  {{ collections['tagsList'] | warn }}
+  <nav class="categories">
+    <ul class="categories__list" style="--children: {{ collections['tagsList'] | length }}">
+      {% for tag in collections['tagsList'] %}
+        <li class="category-link">
+          {% set url = '' %}
+          {% if tag == 'All Items' %}
+            {% set url = '/' %}
+          {% else %}
+            {% set url = '#' + tag | slugify %}
+          {% endif %}
+          <a href="{{ url }}">{{ tag }}</a>
+        </li>
+      {% endfor %}
+      <li class="category-selector"></li>
+    </ul>
+  </nav>
+  <main class="page__items">
+  {# {{ collections | log }} #}
+    {% for item in collections['All Items'] %}
+    {# {{ item.data | log }} #}
+      <a class="item" href="{{ item.page.url }}">
+        <div class="item__photo">
+          <img class="item__photo__thumbnail" alt="Photo of {{ item.page.fileSlug }}" src="{{ env.imgPath}}/{{ item.data['Photos'][0] }}.webp?width=256">
+        </div>
+        <div class="item__content">
+          <h2>{{ item.page.fileSlug }}</h2>
+          <span class="price--asking">{{ item.data['Asking Price'] }}</span> <s class="price--original">{{ item.data['Original Price'] }}</s>
+          <span class="condition">{{ item.data['Condition'] }}</span>
+        </div>
+      </a>
+    {% endfor %}
+  </main>
   {%- endif %}
 </div>

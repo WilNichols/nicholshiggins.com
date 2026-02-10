@@ -9,14 +9,21 @@ body {
   color: var(--contentPrimaryColor);
   padding: var(--col);
   background-color: Canvas;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page {
-  // display: grid;
-  width: auto;
+  width: 100%;
+  max-width: tokens.$breakpoint;
   row-gap: tokens.$gapSmall;
   column-gap: tokens.$gapMedium;
   @media (width <= tokens.$breakpoint) {
     align-content: start;
   }
+}
+
+.page__intro {
+  padding: 0 var(--u24);
 }
