@@ -11,13 +11,24 @@
 }
 
 .item {
-  display: flex;
-  flex-direction: row;
-  border-radius: var(--u24);
-  box-shadow: inset 0 0 0 1px var(--edgeColor);
-  padding: var(--u16);
-  gap: var(--u12);
-  text-decoration: none;
+  & {
+    display: flex;
+    flex-direction: row;
+    border-radius: var(--u24);
+    box-shadow: inset 0 0 0 1px var(--edgeColor);
+    padding: var(--u16);
+    gap: var(--u12);
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: var(--segmenterHoverColor);
+  }
+  &:active {
+    background-color: var(--segmenterActiveColor);
+  }
+  @include mixins.smartPhone {
+    flex-direction: column;
+  }
 }
 
 .item__photo {
@@ -31,10 +42,19 @@
   width: 128px;
   height: 128px;
   object-fit: cover;
+  @include mixins.smartPhone {
+    width: 100%;
+    height: auto;
+    aspect-ratio: calc(3/2);
+  }
 }
 
 .item__content {
   display: flex;
+  width: 100%;
+  @include mixins.smartPhone {
+    padding: 0 var(--u8);
+  }
 }
 
 .item__content__leading, .item__content__trailing {
@@ -59,6 +79,10 @@
 .item__price--original {
   font-size: var(--type--1);
   color: var(--contentSecondaryColor);
+  height: 1lh;
+  &:empty {
+    visibility: hidden; // preserve for layout but hide from screen readers.
+  }
 }
 
 .item__price--asking {

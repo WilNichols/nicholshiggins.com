@@ -12,6 +12,7 @@ tags:
 Related Items: ""
 Condition: "Lightly Used"
 Dimensions: "32.4”w x 19.9”d x 32”h"
+Available: "Now"
 ---
 
 Great bar cart with decorative wheels. Treat it as a static piece instead of attempting to move it around.

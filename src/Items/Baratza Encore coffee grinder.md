@@ -11,6 +11,7 @@ tags:
 Related Items: ""
 Condition: "Used"
 Dimensions: ""
+Available: "Now"
 ---
 
 This coffee grinder has been my workhorse for the last five years, and seen new burrs and regular service in that time, most recently 6mon ago at Texas Coffee Traders.

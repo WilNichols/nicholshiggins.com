@@ -12,6 +12,7 @@ tags:
 Related Items: ""
 Condition: "Lightly Used"
 Dimensions: "34”w x 12”d x 32”h"
+Available: "Now"
 ---
 
 This console’s held up beautifully over the years and makes a great, understated, display piece.

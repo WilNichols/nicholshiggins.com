@@ -12,6 +12,7 @@ tags:
 Related Items: ""
 Condition: "Lightly Used"
 Dimensions: "38”w x 15”d x 70.25”h"
+Available: "Now"
 ---
 
 This bookshelf is a lovely multifunctional piece with both exposed and closed storage.

@@ -36,10 +36,10 @@ layout: _root.njk
         </div>
         <div class="item__content">
           <div class="item__content__leading">
-            <span class="item__condition">{{ item.data['Condition'] }}</span>
+            <span class="item__condition">{{ item.data['Condition'] }} • Avilable {{ item.data['Available'] }}</span>
             <h2 class="item__title">{{ item.page.fileSlug }}</h2>
           </div>
-          <div class="item__content__trailing">{% if item.data['Original Price'] %}<s class="item__price--original">$ {{ item.data['Original Price'] }}</s> {% endif %}<span class="item__price--asking">$ {{ item.data['Asking Price'] }}</span></div>
+          <div class="item__content__trailing"><s class="item__price--original">{% if item.data['Original Price'] %}$&nbsp;{{ item.data['Original Price'] }}{% endif %}</s> <span class="item__price--asking">$&nbsp;{{ item.data['Asking Price'] }}</span></div>
           
         </div>
       </a>

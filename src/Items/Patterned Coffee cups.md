@@ -12,6 +12,7 @@ tags:
 Related Items: ""
 Condition: "Used"
 Dimensions: ""
+Available: "Now"
 ---
 
 These exquisitely patterned coffee cups are perfect for a cappuccino.

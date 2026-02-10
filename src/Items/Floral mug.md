@@ -12,5 +12,6 @@ tags:
 Related Items: ""
 Condition: "Used"
 Dimensions: ""
+Available: "Now"
 ---
 
