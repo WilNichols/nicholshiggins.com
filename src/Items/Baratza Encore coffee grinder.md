@@ -1,9 +1,9 @@
 ---
 Product Link: "https://www.baratza.com/en-us/product/encore-zcg485"
 Originally Purchased: ""
-Purchase Price: $150.00
-Original Price: $150.00
-Asking Price: $75.00
+Purchase Price: "150.00"
+Original Price: "150.00"
+Asking Price: "75.00"
 Photos: 
   - IMG_0323
 tags: 

@@ -35,9 +35,12 @@ layout: _root.njk
           <img class="item__photo__thumbnail" alt="Photo of {{ item.page.fileSlug }}" src="{{ env.imgPath}}/{{ item.data['Photos'][0] }}.webp?width=256">
         </div>
         <div class="item__content">
-          <h2>{{ item.page.fileSlug }}</h2>
-          <span class="price--asking">{{ item.data['Asking Price'] }}</span> <s class="price--original">{{ item.data['Original Price'] }}</s>
-          <span class="condition">{{ item.data['Condition'] }}</span>
+          <div class="item__content__leading">
+            <span class="item__condition">{{ item.data['Condition'] }}</span>
+            <h2 class="item__title">{{ item.page.fileSlug }}</h2>
+          </div>
+          <div class="item__content__trailing">{% if item.data['Original Price'] %}<s class="item__price--original">$ {{ item.data['Original Price'] }}</s> {% endif %}<span class="item__price--asking">$ {{ item.data['Asking Price'] }}</span></div>
+          
         </div>
       </a>
     {% endfor %}

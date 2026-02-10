@@ -1,9 +1,9 @@
 ---
 Product Link: "https://www.westelm.com/products/2060069/?cm_src=buyitagain&cm_sp=buyItAgain-_-orderDetails-_-button"
 Originally Purchased: 2019-10-05
-Purchase Price: $559.20
-Original Price: $699.00
-Asking Price: $350.00
+Purchase Price: "559.20"
+Original Price: "699.00"
+Asking Price: "350.00"
 Photos: 
   - IMG_0304
   - IMG_0305
