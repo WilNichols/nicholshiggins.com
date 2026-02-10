@@ -1,7 +1,11 @@
 ---
-layout: 'index.njk'
-permalink: 'index.html'
-eleventyExcludeFromCollections: true
+layout: index.njk
+pagination:
+  data: collections['tagsList']
+  size: 1
+  alias: tag
+permalink: "{% if tag == 'All Items' %}/index.html{% else %}/{{ tag | slugify }}/index.html{% endif %}"
+# permalink: index.njk
 ---
 # Hi there!
 Welcome to our internet yard sale.

@@ -42,6 +42,7 @@ $gap: var(--u6);
 		flex: 1;
 		font-weight: bold;
 		z-index: 10;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
 	}
 	&:hover {
 		background-color: var(--segmenterHoverColor);
@@ -59,6 +60,7 @@ $gap: var(--u6);
 	height: 100%;
 	text-align: center;
 	font-size: var(--type--1);
+	z-index:10;
 }
 
 .category-selector {
@@ -80,6 +82,8 @@ $gap: var(--u6);
 		0 1.5px 3px 0 rgba(0,0,0,.05),
 		0 .504px 1.08px 0 rgba(0,0,0,.035),
 		inset 0 1px 0.5px var(--segmenterSelectionHighlight);
+	transform: translateX(calc(var(--selection, 0) * (100% + $gap)));
+	view-transition-name: select-translate;
 	&::after {
 		content: '';
 		position: absolute;

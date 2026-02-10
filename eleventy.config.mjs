@@ -30,7 +30,11 @@ export default async function(eleventyConfig) {
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
   
   // Filters
-  
+
+  eleventyConfig.addFilter("indexOf", (arr, value) => {
+    return arr.indexOf(value);
+  });
+
   // https://stackoverflow.com/questions/66083103/how-to-generate-a-list-of-all-collections-in-11ty
   eleventyConfig.addCollection("tagsList", function(collectionsApi) {
       const tagsList = new Set();
@@ -39,7 +43,7 @@ export default async function(eleventyConfig) {
               item.data.tags.map( tag => tagsList.add(tag))
           }
       });
-      return tagsList;
+      return Array.from(tagsList);
   });
   
   // https://stackoverflow.com/questions/66083103/how-to-generate-a-list-of-all-collections-in-11ty

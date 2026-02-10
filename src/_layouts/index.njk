@@ -10,14 +10,15 @@ layout: _root.njk
   {{ 'test' | log }}
   {{ collections['tagsList'] | warn }}
   <nav class="categories">
-    <ul class="categories__list" style="--children: {{ collections['tagsList'] | length }}">
+    {% set tagIndex = collections['tagsList'] | indexOf(tag) %}
+    <ul class="categories__list" style="--children: {{ collections['tagsList'] | length }}; --selection: {{ tagIndex }}">
       {% for tag in collections['tagsList'] %}
         <li class="category-link">
           {% set url = '' %}
           {% if tag == 'All Items' %}
             {% set url = '/' %}
           {% else %}
-            {% set url = '#' + tag | slugify %}
+            {% set url = '/' + tag | slugify + '/' %}
           {% endif %}
           <a href="{{ url }}">{{ tag }}</a>
         </li>
@@ -27,7 +28,7 @@ layout: _root.njk
   </nav>
   <main class="page__items">
   {# {{ collections | log }} #}
-    {% for item in collections['All Items'] %}
+    {% for item in collections[tag] %}
     {# {{ item.data | log }} #}
       <a class="item" href="{{ item.page.url }}">
         <div class="item__photo">
