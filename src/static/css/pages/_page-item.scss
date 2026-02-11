@@ -64,6 +64,7 @@ body:has(> .page--item) {
   @media(width < 720px) {
     flex-direction: row;
     padding: var(--bodyPadd) var(--bodyPadd) 0 var(--bodyPadd);
+    max-width: 100dvw;
   }
   @media(width < 720px) {
     gap: var(--u32);
@@ -180,7 +181,7 @@ body:has(> .page--item) {
   min-width: calc(50% - var(--u8)); 
   container-type: inline-size;
   container-name: item;
-  @media(720px < width < 960px) {
+  @media(width < 960px) {
     min-width: 100%;
   }
 }
