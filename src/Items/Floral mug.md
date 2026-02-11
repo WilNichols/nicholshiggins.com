@@ -1,17 +1,17 @@
 ---
-Product Link: ""
-Originally Purchased: ""
-Purchase Price: ""
-Original Price: ""
-Asking Price: "5.00"
-Photos: 
+productLink: ""
+originallyPurchased: ""
+purchasePrice: ""
+originalPrice: ""
+askingPrice: "5.00"
+photos: 
   - IMG_0311
 tags: 
   - Dining
   - Kitchen
-Related Items: ""
-Condition: "Used"
-Dimensions: ""
-Available: "Now"
+relatedItems: ""
+condition: "Used"
+dimensions: ""
+available: "Now"
 ---
 

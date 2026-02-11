@@ -9,7 +9,6 @@ body {
     line-height: tokens.$gapSmall;
     @extend %font--text-regular;
     color: var(--contentPrimaryColor);
-    padding: var(--col);
     background-color: Canvas;
     display: flex;
     flex-direction: column;
@@ -22,7 +21,6 @@ body {
 
 .page {
   width: 100%;
-  max-width: tokens.$breakpoint;
   row-gap: tokens.$gapSmall;
   column-gap: tokens.$gapMedium;
   @media (width <= tokens.$breakpoint) {

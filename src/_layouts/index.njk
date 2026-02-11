@@ -1,14 +1,12 @@
 ---
 layout: _root.njk
 ---
+{% from "card.njk" import Card with context %}
 
 <div class="page page--index">
-  {% if content -%}
   <div class="page__intro">
     {{ content | safe }}
   </div>
-  {{ 'test' | log }}
-  {{ collections['tagsList'] | warn }}
   <nav class="categories">
     {% set tagIndex = collections['tagsList'] | indexOf(tag) %}
     <ul class="categories__list" style="--children: {{ collections['tagsList'] | length }}; --selection: {{ tagIndex }}">
@@ -27,25 +25,16 @@ layout: _root.njk
     </ul>
   </nav>
   <main class="page__items">
-  {# {{ collections | log }} #}
     {% for item in collections[tag] %}
-    {# {{ item.data | log }} #}
-      <a class="item" href="{{ item.page.url }}">
-        <div class="item__photo">
-          <img class="item__photo__thumbnail" alt="Photo of {{ item.page.fileSlug }}" src="{{ env.imgPath}}/{{ item.data['Photos'][0] }}.webp?width=256">
-        </div>
-        <div class="item__content">
-          <div class="item__content__leading">
-            <span class="item__condition">{{ item.data['Condition'] }}</span>
-            <h2 class="item__title">{{ item.page.fileSlug }}</h2>
-          </div>
-          <div class="item__content__trailing"><s class="item__price--original">{% if item.data['Original Price'] %}$&nbsp;{{ item.data['Original Price'] }}{% endif %}</s> <span class="item__price--asking">$&nbsp;{{ item.data['Asking Price'] }}</span></div>
-          <div class="item__link-affordance">
-            <span class="item__availability">Available {{ item.data['Available'] }}</span>
-            <span class="detail-link">Details -></span></div>
-        </div>
-      </a>
+      {{ Card({
+        url: item.page.url,
+        fileSlug: item.page.fileSlug,
+        photo: item.data.photos[0],
+        condition: item.data.condition,
+        originalPrice: item.data.originalPrice,
+        askingPrice: item.data.askingPrice,
+        available: item.data.available
+        }) }}
     {% endfor %}
   </main>
-  {%- endif %}
 </div>

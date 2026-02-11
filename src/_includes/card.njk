@@ -1,0 +1,28 @@
+{# Card(props: {
+  url: url,
+  fileSlug: fileSlug,
+  photo: photo,
+  condition: condition, 
+  originalPrice: originalPrice,
+  askingPrice: askingPrice,
+  available: available,
+  compact: false
+}) #}
+
+{% macro Card(props) -%}
+  <a class="item{{ ' item--compact' if props.compact }}" href="{{ props.url }}">
+    <div class="item__photo">
+      <img class="item__photo__thumbnail" alt="Photo of {{ props.fileSlug }}" src="{{ env.imgPath }}/{{ props.photo }}.webp?width=256">
+    </div>
+    <div class="item__content">
+      <div class="item__content__leading">
+        <span class="item__condition">{{ props.condition }}</span>
+        <h2 class="item__title">{{ props.fileSlug }}</h2>
+      </div>
+      <div class="item__content__trailing"><s class="item__price--original">{% if props.originalPrice %}$&nbsp;{{ props.originalPrice }}{% endif %}</s> <span class="item__price--asking">$&nbsp;{{ props.askingPrice }}</span></div>
+      <div class="item__link-affordance">
+        <span class="item__availability">Available {{ props.available }}</span>
+        <span class="detail-link">Details -></span></div>
+    </div>
+  </a>
+{%- endmacro %}

@@ -1,17 +1,17 @@
 ---
-Product Link: ""
-Originally Purchased: ""
-Purchase Price: ""
-Original Price: ""
-Asking Price: "5.00"
-Photos: 
+productLink: ""
+originallyPurchased: ""
+purchasePrice: ""
+originalPrice: ""
+askingPrice: "5.00"
+photos: 
   - IMG_0312
 tags: 
   - Kitchen
-Related Items: ""
-Condition: Like New
-Dimensions: ""
-Available: "Now"
+relatedItems: ""
+condition: Like New
+dimensions: ""
+available: "Now"
 ---
 
 Pour-over for a single coffee mug

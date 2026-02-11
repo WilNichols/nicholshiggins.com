@@ -1,18 +1,18 @@
 ---
-Product Link: ""
-Originally Purchased: ""
-Purchase Price: ""
-Original Price: ""
-Asking Price: "15.00"
-Photos: 
+productLink: ""
+originallyPurchased: ""
+purchasePrice: ""
+originalPrice: ""
+askingPrice: "15.00"
+photos: 
   - IMG_0317
 tags: 
   - Dining
   - Kitchen
-Related Items: ""
-Condition: "Used"
-Dimensions: ""
-Available: "Now"
+relatedItems: ""
+condition: "Used"
+dimensions: ""
+available: "Now"
 ---
 
 These exquisitely patterned coffee cups are perfect for a cappuccino.

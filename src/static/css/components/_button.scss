@@ -1,0 +1,59 @@
+.button {
+	border-radius: var(--u8);
+	font-size: var(--u16);
+	font-weight: bold;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.button--square {
+	width: var(--u32);
+	height: var(--u32) !important;
+	display: grid;
+	place-content: center;
+}
+
+.button--secondary {
+	padding: var(--u4) calc(var(--u8) + var(--u2));
+	background-color: var(--materialSecondaryColor);
+	&:hover {
+		background-color: var(--materialSecondaryHoverColor);
+	}
+	// background: linear-gradient(
+	// 	to top,
+	// 	var(--segmenterSelectionGradientEnd) 0%,
+	// 	var(--segmenterSelectionGradientMiddle) 33%,
+	// 	var(--segmenterSelectionGradientTop) 100%);	
+	// box-shadow:
+	// 	0 6px 12px 0 rgba(0,0,0,.1),
+	// 	0 1.8px 3.6px 0 rgba(0,0,0,.065),
+	// 	0 .75px 1.5px 0 rgba(0,0,0,.05),
+	// 	0 .252px .504px 0 rgba(0,0,0,.035),
+	// 	inset 0 1px 0.5px var(--segmenterSelectionHighlight);
+		
+}
+
+.button--primary {
+	padding: var(--u4) calc(var(--u8) + var(--u2));
+	background: linear-gradient(
+		to top,
+		var(--buyButtonGradientEnd) 0%,
+		var(--buyButtonGradientMiddle) 33%,
+		var(--buyButtonGradientTop) 100%);	
+	box-shadow:
+		0 6px 12px 0 rgba(0,0,0,.1),
+		0 1.8px 3.6px 0 rgba(0,0,0,.065),
+		0 .75px 1.5px 0 rgba(0,0,0,.05),
+		0 .252px .504px 0 rgba(0,0,0,.035),
+		inset 0 1px 0.5px var(--buyButtonHighlight);
+}
+
+@media(width < 420px) {
+
+.button--primary, .button--secondary {
+	display: grid;
+	place-content: center;
+	height: var(--u48);
+}
+
+}

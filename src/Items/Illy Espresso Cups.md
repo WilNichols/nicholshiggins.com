@@ -1,18 +1,18 @@
 ---
-Product Link: ""
-Originally Purchased: ""
-Purchase Price: ""
-Original Price: ""
-Asking Price: "7.00"
-Photos: 
+productLink: ""
+originallyPurchased: ""
+purchasePrice: ""
+originalPrice: ""
+askingPrice: "7.00"
+photos: 
   - IMG_0313
 tags: 
   - Dining
   - Kitchen
-Related Items: ""
-Condition: "Used"
-Dimensions: ""
-Available: "Now"
+relatedItems: ""
+condition: "Used"
+dimensions: ""
+available: "Now"
 ---
 
 Two espresso cups and their saucers.
