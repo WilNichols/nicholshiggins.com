@@ -41,9 +41,11 @@
     @include light-dark(--segmenterSelectionGradientEnd, var(--cK95), var(--cKD25));
     @include light-dark(--segmenterHoverColor, var(--cK70W), var(--cKD25B));
     @include light-dark(--segmenterActiveColor, var(--cK65W), var(--cKD30B));
-    @include light-dark(--buyButtonHighlight, var(--cY90), var(--cYD60));
+    @include light-dark(--buyButtonHighlight, transparent, var(--cYD60));
     @include light-dark(--buyButtonGradientTop, var(--cY70), var(--cYD50));
     @include light-dark(--buyButtonGradientMiddle, var(--cY55), var(--cYD30));
     @include light-dark(--buyButtonGradientEnd, var(--cY65), var(--cYD40));
+    @include light-dark(--buyButtonShadow, var(--cY80), var(--cYD10));
+    @include light-dark(--buyButtonEdge, var(--cY55W), var(--cYD50B));
   }
 }

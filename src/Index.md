@@ -1,5 +1,6 @@
 ---
 layout: index.njk
+title: "Wil’s & Darien’s internet yard sale"
 pagination:
   data: collections['tagsList']
   size: 1

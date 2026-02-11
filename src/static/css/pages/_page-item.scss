@@ -96,6 +96,7 @@ body:has(> .page--item) {
 .page--item__content-wrapper {
   position: relative;
   display: flex;
+  max-height: calc(100dvh - 2 * var(--bodyPadd));
   @media(width < 720px) {
     justify-content: start;
     padding: 0 var(--bodyPadd) var(--bodyPadd) var(--bodyPadd);
@@ -123,10 +124,17 @@ body:has(> .page--item) {
   display: flex;
   flex-direction: column;
   gap: var(--u8);
+  @media(width < 420px) {
+    margin-top: calc(-1 * (var(--u32) + var(--u24)));
+    margin-left: 48px;
+  }
 }
 
 .item__title--large {
-  font-size: var(--type-5);
+  font-size: var(--type-1);
+  min-height: var(--u32);
+  line-height: var(--u24);
+  padding: var(--u4) 0;
 }
 
 .item__subtitle__separator {
@@ -143,7 +151,13 @@ body:has(> .page--item) {
 }
 
 .item__content__prices {
-  margin: 1lh 0 1.5lh 0;
+  margin: 1lh 0;
+}
+
+@media(width < 420px) {
+  .item-body p {
+    padding: 0 0 0 48px;
+  }
 }
 
 .item-actions {
