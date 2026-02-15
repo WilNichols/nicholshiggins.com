@@ -19,6 +19,9 @@
 	&:hover {
 		background-color: var(--materialSecondaryHoverColor);
 	}
+	&:active {
+		background-color: var(--materialSecondaryActiveColor);
+	}
 	// background: linear-gradient(
 	// 	to top,
 	// 	var(--segmenterSelectionGradientEnd) 0%,
@@ -35,18 +38,37 @@
 
 .button--primary {
 	padding: var(--u4) calc(var(--u8) + var(--u2));
+	color: var(--buyButtonLabel);
 	background: linear-gradient(
 		to top,
 		var(--buyButtonGradientEnd) 0%,
 		var(--buyButtonGradientMiddle) 33%,
 		var(--buyButtonGradientTop) 100%);	
+	--shadow: var(--buyButtonShadow);
 	box-shadow:
-		0 6px 12px 0 color-mix(in srgb, var(--buyButtonShadow) 100%, transparent),
-		0 1.8px 3.6px 0 color-mix(in srgb, var(--buyButtonShadow) 65%, transparent),
-		0 .75px 1.5px 0 color-mix(in srgb, var(--buyButtonShadow) 50%, transparent),
-		0 .252px .504px 0 color-mix(in srgb, var(--buyButtonShadow) 35%, transparent),
+		0 6px 12px 0 color-mix(in srgb, var(--shadow) 100%, transparent),
+		0 1.8px 3.6px 0 color-mix(in srgb, var(--shadow) 65%, transparent),
+		0 .75px 1.5px 0 color-mix(in srgb, var(--shadow) 50%, transparent),
+		0 .252px .504px 0 color-mix(in srgb, var(--shadow) 35%, transparent),
 		inset 0 1px 0.5px var(--buyButtonHighlight),
 		inset 0 0 0 1px var(--buyButtonEdge);
+	&:hover {
+		background: linear-gradient(
+			to top,
+			var(--buyButtonHoverGradientEnd) 0%,
+			var(--buyButtonHoverGradientMiddle) 33%,
+			var(--buyButtonHoverGradientTop) 100%);	
+		--shadow: var(--buyButtonHoverShadow);
+	}
+	&:active {
+		background: linear-gradient(
+			to top,
+			var(--buyButtonActiveGradientEnd) 0%,
+			var(--buyButtonActiveGradientMiddle) 33%,
+			var(--buyButtonActiveGradientTop) 100%);
+		--shadow: var(--buyButtonActiveShadow);	
+	}
+		
 }
 
 @media(width < 420px) {

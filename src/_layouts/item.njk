@@ -3,6 +3,29 @@ layout: _root.njk
 ---
 {% from "card.njk" import Card with context %}
 
+{% set body %}
+Below is a template that you can fill out, and I’ll get back to you asap.
+
+Your Name:
+
+Preferred contact method: (your email address or cell number)
+
+If phone, can you receive text messages: Yes / No
+
+Item name: {{ page.fileSlug }}
+
+Offered price: ${{ askingPrice }}
+
+Pick-up in Austin: Yes / No
+
+Address for delivery:
+
+Desired delivery date:
+
+Other interested items:
+
+{% endset %}
+
 <div class="page page--item">
 	<aside class="page--item__photos">
 		<ul class="item-photos">
@@ -26,8 +49,7 @@ layout: _root.njk
 			<main class="item-body">
 				{{ content | safe }}
 				<div class="item-actions">
-					<a class="button button--secondary" href="#">Inquire</a>
-					<a class="button button--primary" href="#">Buy Now</a>
+					<a class="button button--primary" href="mailto:{{ meta.email }}?subject={{ ('Buying item ' ~ page.fileSlug) | urlencode }}&body={{ body | urlencode }}">Email to buy</a>
 			</main>
 			<aside class="related">
 				<h2 class="related__title">Related Items</h2>
