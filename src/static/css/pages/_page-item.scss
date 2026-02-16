@@ -94,24 +94,26 @@ body:has(> .page--item) {
 }
 
 .page--item__content-wrapper {
-  position: relative;
+  position: sticky;
   display: flex;
   max-height: calc(100dvh - 2 * var(--bodyPadd));
+  align-items: start;
+  top: var(--col);
+  // hide scrollbars
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  ::-webkit-scrollbar { display: none; }
   @media(width < 720px) {
     justify-content: start;
     padding: 0 var(--bodyPadd) var(--bodyPadd) var(--bodyPadd);
+    top: unset;
+    position: static;
   }
 }
 
 .page--item__content {
   margin: auto 0;
-  position: sticky;
-  top: var(--col);
   max-width: tokens.$breakpoint;
-  @media(width < 720px) {
-    top: unset;
-    position: static;
-  }
 }
 
 .item-header {

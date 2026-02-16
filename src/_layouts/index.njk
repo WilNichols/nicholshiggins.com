@@ -25,7 +25,7 @@ layout: _root.njk
     </ul>
   </nav>
   <main class="page__items">
-    {% for item in collections[tag] %}
+    {% for item in collections[tag] | reverse %}
       {{ Card({
         url: item.page.url,
         fileSlug: item.page.fileSlug,

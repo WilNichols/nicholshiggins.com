@@ -31,6 +31,17 @@ export default async function(eleventyConfig) {
   
   // Filters
 
+  eleventyConfig.addFilter("parseAvailableDate", (date) => {
+    if (date === "Now") return date;
+    const [month, day, year] = date.split("/");
+    const parsedDate = new Date(year, month - 1, day);
+    
+    return parsedDate.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric"
+    })
+  });
+  
   eleventyConfig.addFilter("indexOf", (arr, value) => {
     return arr.indexOf(value);
   });

@@ -42,7 +42,7 @@ Other interested items:
 				<a class="button button--secondary button--square" href="../"><-</a>
 				<div class="item-header__text">
 					<h1 class="item__title--large">{{ page.fileSlug }}</h1>
-					<div class="item__subtitle"><span class="item__availability">Available {{ available }}</span> <span class="item__subtitle__separator">•</span> <span class="item__condition">{{ condition }}</span></div>
+					<div class="item__subtitle"><span class="item__availability">Available {{ available | parseAvailableDate }}</span> <span class="item__subtitle__separator">•</span> <span class="item__condition">{{ condition }}</span></div>
 					<div class="item__content__prices">{% if originalPrice %}<s class="item__price--original">$&nbsp;{{ originalPrice }}</s>{% endif %} <span class="item__price--asking">$&nbsp;{{ askingPrice }}</span></div>
 				</div>
 			</header>

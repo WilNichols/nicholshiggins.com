@@ -21,7 +21,7 @@
       </div>
       <div class="item__content__trailing"><s class="item__price--original">{% if props.originalPrice %}$&nbsp;{{ props.originalPrice }}{% endif %}</s> <span class="item__price--asking">$&nbsp;{{ props.askingPrice }}</span></div>
       <div class="item__link-affordance">
-        <span class="item__availability">Available {{ props.available }}</span>
+        <span class="item__availability">Available {{ props.available | parseAvailableDate}}</span>
         <span class="detail-link">Details -></span></div>
     </div>
   </a>
