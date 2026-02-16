@@ -1,0 +1,11 @@
+@use 'tokens';
+
+@view-transition {
+  navigation: auto;
+}
+
+:root {
+  @include tokens.sizeAliases;
+  @include tokens.colorAliases;
+  @include tokens.colorLiterals;
+}

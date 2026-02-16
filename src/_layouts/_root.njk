@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ meta.lang }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="fediverse:creator" content="@wil@indieweb.social" />
+    <title>{{ altTitle if altTitle else title }}</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url | bust }}">
+  </head>
+  <body>
+    {{ content | safe }}
+    {% js "defer" %}
+      let body = document.getElementsByTagName('body')[0];
+      body.classList.add('page-loaded');
+    {% endjs %}
+    <script>
+    {% getBundle "js", "defer" %}
+    </script>
+  </body>
+</html>

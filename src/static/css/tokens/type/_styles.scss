@@ -1,0 +1,70 @@
+@use 'fonts';
+@use '../size/aliases' as tokens;
+@forward 'fonts';
+
+$body-gap: 1lh;
+
+@mixin textStyles {
+  @include fonts.placeholders;
+}
+
+@mixin headingStyles {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: var(--type-#{6 - $i});
+      @extend %font--display-medium;
+    }
+  }
+}
+
+@mixin textElementStyles {
+
+  @include textStyles;
+
+  a {
+    color: var(--contentPrimaryColor);
+    text-decoration-thickness: tokens.$lineHeight;
+    text-underline-offset: tokens.$lineHeight;
+    p & {
+      color: var(--linkColor);
+      &:visited {
+        color: var(--linkVisitedColor);
+      }
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6, .note-title {  
+    text-wrap: pretty;
+  }
+
+  p {
+    margin: 0 auto $body-gap auto;
+    text-wrap: pretty;
+    line-height: 1.5em;
+  }
+
+  @include headingStyles;
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      @extend h#{$i};
+      line-height: 1.5em;
+      position: relative;
+    }
+  }
+
+  h1 {
+    line-height: 1em;
+    margin: 0;
+  }
+
+  .page__title {
+    font-size: var(--type-0);
+    @extend %font--display-medium;
+  }
+
+  h1 + p {
+    @extend %font--text-regular;
+    color: var(--contentSecondaryColor);
+  }
+}

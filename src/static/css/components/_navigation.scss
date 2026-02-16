@@ -1,0 +1,114 @@
+$minTab: 96px;
+
+.categories {
+	margin: 1lh 0;
+	position: sticky;
+	top: 1lh;
+	z-index: 100;
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+	&::after {
+		box-shadow: inset 0 0 0 1px var(--edgeColor);
+		border-radius: var(--u24);
+		pointer-events: none;
+	}
+	&::before {
+			z-index: 0;
+			border-radius: var(--u24);
+			background-color: Canvas;
+			opacity: 0.75;
+	}
+}
+
+$gap: var(--u6);
+.categories__list {
+	position: relative;
+	display: flex;
+	height: var(--u48);
+	padding: $gap;
+	gap: $gap;
+	list-style: none;
+	backdrop-filter: blur(20px);
+	border-radius: var(--u24);
+	overflow: auto;
+	// hide scrollbars
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	::-webkit-scrollbar { display: none; }
+	mask-image: linear-gradient(to right, #000 0%, #000 70%, transparent 100%);
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
+	
+}
+
+%roundrect {
+	border-radius: calc((var(--u48) - var(--u8))/2);
+}
+
+.category-link {
+	& {
+		@extend %roundrect;
+		flex: 1;
+		font-weight: bold;
+		z-index: 10;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+	&:hover {
+		background-color: var(--segmenterHoverColor);
+	}
+	&:active {
+		background-color: var(--segmenterActiveColor);
+	}
+}
+
+.category-link a {
+	display: grid;
+	place-content: center;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: var(--type--1);
+	z-index: 10;
+	min-width: $minTab;
+}
+
+.category-selector {
+	@extend %roundrect;
+	overflow: hidden;
+	z-index: 1;
+	inset: $gap 0 $gap $gap;
+	position: absolute;
+	min-width: $minTab;
+	width: calc((100% - $gap * (var(--children, 0) + 1))/var(--children));
+	box-shadow:
+		0 12px 24px 0 rgba(0,0,0,.1),
+		0 3.6px 7.2px 0 rgba(0,0,0,.065),
+		0 1.5px 3px 0 rgba(0,0,0,.05),
+		0 .504px 1.08px 0 rgba(0,0,0,.035);
+	transform: translateX(calc(var(--selection, 0) * (100% + $gap)));
+	view-transition-name: select-translate;
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+	&::before {
+		@extend %roundrect;
+		background: linear-gradient(
+			to top,
+			var(--segmenterSelectionGradientEnd) 0%,
+			var(--segmenterSelectionGradientMiddle) 33%,
+			var(--segmenterSelectionGradientTop) 100%);	
+		z-index: 0;
+		box-shadow: inset 0 1px 0.5px var(--segmenterSelectionHighlight);
+	}
+	&::after {
+		background-color: Canvas;
+		opacity: 0.5;
+		z-index: -1;
+	}
+}

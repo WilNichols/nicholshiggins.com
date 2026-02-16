@@ -1,0 +1,40 @@
+---
+layout: _root.njk
+---
+{% from "card.njk" import Card with context %}
+
+<div class="page page--index">
+  <div class="page__intro">
+    {{ content | safe }}
+  </div>
+  <nav class="categories">
+    {% set tagIndex = collections['tagsList'] | indexOf(tag) %}
+    <ul class="categories__list" style="--children: {{ collections['tagsList'] | length }}; --selection: {{ tagIndex }}">
+      {% for tag in collections['tagsList'] %}
+        <li class="category-link">
+          {% set url = '' %}
+          {% if tag == 'All Items' %}
+            {% set url = '/' %}
+          {% else %}
+            {% set url = '/' + tag | slugify + '/' %}
+          {% endif %}
+          <a href="{{ url }}">{{ tag }}</a>
+        </li>
+      {% endfor %}
+      <li class="category-selector"></li>
+    </ul>
+  </nav>
+  <main class="page__items">
+    {% for item in collections[tag] | reverse %}
+      {{ Card({
+        url: item.page.url,
+        fileSlug: item.page.fileSlug,
+        photo: item.data.photos[0],
+        condition: item.data.condition,
+        originalPrice: item.data.originalPrice,
+        askingPrice: item.data.askingPrice,
+        available: item.data.available
+        }) }}
+    {% endfor %}
+  </main>
+</div>

@@ -1,0 +1,61 @@
+@use 'literals';
+@use 'mixins' as *;
+
+@mixin colorAliases {
+  & {
+    @include light-dark(--materialPrimaryColor, var(--cK100), var(--cKD0));
+    @include light-dark(--materialPrimaryInvertedColor, var(--cK0), var(--cKD100));
+    @include light-dark(--materialPrimaryHoverColor, var(--cK95), var(--cKD15));
+    @include light-dark(--materialPrimaryActiveColor, var(--cK90), var(--cKD25));
+    @include light-dark(--materialSecondaryColor, var(--cK95), var(--cKD15));
+    @include light-dark(--materialSecondaryHoverColor, var(--cK90), var(--cKD20));
+    @include light-dark(--materialSecondaryActiveColor, var(--cK85), var(--cKD25));
+    @include light-dark(--materialElevatedNoninteractivePrimaryColor, var(--cKD100), var(--cKD10));
+    @include light-dark(--materialElevatedNoninteractiveSecondaryColor, var(--cK95), var(--cKD05));
+    @include light-dark(--materialElevatedPrimaryColor, var(--cK100), var(--cKD10));
+    @include light-dark(--materialElevatedPrimaryHoverColor, var(--cK95), var(--cKD20));
+    @include light-dark(--materialElevatedPrimaryActiveColor, var(--cK90), var(--cKD30));
+    @include light-dark(--materialGroupedPrimaryColor, var(--cK100), var(--cKD10));
+    @include light-dark(--materialGroupedSecondaryColor, var(--cK95), var(--cKD0));
+    @include light-dark(--contentPrimaryColor, var(--cK05), var(--cKD100));
+    @include light-dark(--contentPrimaryInvertedColor, var(--cK100), var(--cKD05));
+    @include light-dark(--contentSecondaryColor, var(--cK50), var(--cKD55));
+    @include light-dark(--contentTertiaryColor, var(--cK65), var(--cKD40));
+    @include light-dark(--contentQuaternaryColor, var(--cK80), var(--cKD20));
+    @include light-dark(--linkColor, var(--cB50), var(--cBD55));
+    @include light-dark(--linkVisitedColor, var(--cV50), var(--cVD55));
+    @include light-dark(--linkUnderlineColor, var(--cK90), var(--cKD40));
+    @include light-dark(--tagBackgroundColor, var(--cK90), var(--cKD20));
+    @include light-dark(--tagBorderColor, var(--cK80), var(--cKD30));
+    @include light-dark(--tagContentColor, var(--cK30), var(--cKD90));
+    @include light-dark(--evergreenBackgroundColor, var(--cG90), var(--cGD20));
+    @include light-dark(--evergreenBorderColor, var(--cG80), var(--cGD30));
+    @include light-dark(--evergreenContentColor, var(--cG30), var(--cGD90));
+    @include light-dark(--evergreenVersionBackgroundColor, var(--cG40), var(--cGD50));
+    @include light-dark(--evergreenVersionBorderColor, var(--cG30), var(--cGD60));
+    @include light-dark(--evergreenVersionContentColor, var(--cK100), var(--cKD0));
+    @include light-dark(--edgeColor, var(--cK70W), var(--cKD30B));
+    @include light-dark(--shadowMultiplier, 1, 2);
+    @include light-dark(--segmenterSelectionHighlight, var(--cK100), var(--cKD25));
+    @include light-dark(--segmenterSelectionGradientTop, var(--cK100), var(--cKD20));
+    @include light-dark(--segmenterSelectionGradientMiddle, var(--cK90W), var(--cKD25B));
+    @include light-dark(--segmenterSelectionGradientEnd, var(--cK95), var(--cKD15));
+    @include light-dark(--segmenterHoverColor, var(--cK70W), var(--cKD25B));
+    @include light-dark(--segmenterActiveColor, var(--cK65W), var(--cKD30B));
+    @include light-dark(--buyButtonLabel, var(--cK100), var(--cK100));
+    @include light-dark(--buyButtonHighlight, var(--cV70W), var(--cVD60));
+    @include light-dark(--buyButtonGradientTop, var(--cV60), var(--cVD50));
+    @include light-dark(--buyButtonGradientMiddle, var(--cV50), var(--cVD40));
+    @include light-dark(--buyButtonGradientEnd, var(--cV55), var(--cVD45));
+    @include light-dark(--buyButtonShadow, var(--cV75), var(--cVD10));
+    @include light-dark(--buyButtonEdge, transparent, var(--cVD50B));
+    @include light-dark(--buyButtonHoverGradientTop, var(--cV55), var(--cVD55));
+    @include light-dark(--buyButtonHoverGradientMiddle, var(--cV45), var(--cVD45));
+    @include light-dark(--buyButtonHoverGradientEnd, var(--cV50), var(--cVD50));
+    @include light-dark(--buyButtonHoverShadow, var(--cV75), var(--cVD15));
+    @include light-dark(--buyButtonActiveGradientTop, var(--cV50), var(--cVD60));
+    @include light-dark(--buyButtonActiveGradientMiddle, var(--cV40), var(--cVD50));
+    @include light-dark(--buyButtonActiveGradientEnd, var(--cV45), var(--cVD55));
+    @include light-dark(--buyButtonActiveShadow, var(--cV70), var(--cVD20));
+  }
+}

@@ -1,0 +1,33 @@
+@use 'tokens';
+@use 'mixins';
+
+@include tokens.textStyles;
+
+body {
+  & {
+    font-size: var(--type-0);
+    line-height: tokens.$gapSmall;
+    @extend %font--text-regular;
+    color: var(--contentPrimaryColor);
+    background-color: Canvas;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mixins.smartPhone {
+    padding: var(--u48) var(--u16) var(--u16) var(--u16);
+  }
+}
+
+.page {
+  width: 100%;
+  row-gap: tokens.$gapSmall;
+  column-gap: tokens.$gapMedium;
+  @media (width <= tokens.$breakpoint) {
+    align-content: start;
+  }
+}
+
+.page__intro {
+  padding: 0 var(--u24);
+}

@@ -1,0 +1,14 @@
+@use 'sass:list';
+@use '../tokens';
+
+@mixin share($props.../*, $value */) {
+  @for $i from 1 to list.length($props) {
+    #{list.nth($props, $i)}: list.nth($props, -1);
+  }
+}
+
+@mixin smartPhone {
+  @media (width <= tokens.$breakpoint) and (pointer: coarse) {
+    @content;
+  }
+}
