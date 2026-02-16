@@ -15,7 +15,7 @@ body {
     align-items: center;
   }
   @include mixins.smartPhone {
-    padding: var(--u48) var(--u16) var(--u16) var(--u16);
+    padding: var(--u32) var(--u16) var(--u16) var(--u16) !important;
   }
 }
 
