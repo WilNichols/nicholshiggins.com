@@ -4,7 +4,7 @@ available: "Now"
 originallyPurchased: ""
 purchasePrice: ""
 originalPrice: "49.99"
-askingPrice: "200 x 2"
+askingPrice: "20 x 2"
 photos:
   - IMG_4332
 tags:

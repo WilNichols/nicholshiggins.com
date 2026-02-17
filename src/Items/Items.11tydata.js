@@ -3,6 +3,7 @@ export default function () {
     permalink: "/{{ page.fileSlug | slugify }}/index.html",
     layout: 'item.njk',
     tags: ["All Items"],
+    date: "git Last Modified",
     eleventyComputed: {
       title: data => data.page.fileSlug
     }

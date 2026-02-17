@@ -2,8 +2,7 @@
 productLink: "https://www.bludot.com/products/dang-2-door-2-drawer-console"
 available: "Now"
 originallyPurchased: ""
-purchasePrice: "2,995.00"
-originalPrice: "750.00"
+originalPrice: "2,995.00"
 askingPrice: "750.00"
 photos:
   - IMG_4255

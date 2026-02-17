@@ -4,7 +4,7 @@ available: "Now"
 originallyPurchased: ""
 purchasePrice: ""
 originalPrice: "60 x 4"
-askingPrice: "10 x 2"
+askingPrice: "10 x 4"
 photos:
   - IMG_4293
   - IMG_4294

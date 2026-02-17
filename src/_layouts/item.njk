@@ -49,6 +49,7 @@ Other interested items:
 			<main class="item-body">
 				{{ content | safe }}
 				<div class="item-actions">
+				{% if productLink %}<a class="button button--secondary" href="{{ productLink }}" target="blank">View the original listing</a>{% endif %}
 					<a class="button button--primary" href="mailto:{{ meta.email }}?subject={{ ('Buying item ' ~ page.fileSlug) | urlencode }}&body={{ body | urlencode }}">Email to buy</a>
 			</main>
 			<aside class="related">
