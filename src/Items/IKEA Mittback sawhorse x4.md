@@ -20,4 +20,4 @@ condition: "Heavily used"
 dimensions: ""
 ---
 
-I used these as legs for two desks before replacing them with shelving units. They visible weathered a teething black lab, but are as stable as they were and get the job done.
+I used these as legs for two desks before replacing them with shelving units. They visible weathered a teething black lab, but are as stable as they were and get the job done. Originally legs for my [two IKEA Gerton desktops](/ikea-gerton-x2/).
