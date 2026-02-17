@@ -17,4 +17,4 @@ condition: "Lightly used"
 dimensions: ""
 ---
 
-Cleaned after used and in storage since.
+Cleaned after used and in storage since. Two of the longer and one shorter.

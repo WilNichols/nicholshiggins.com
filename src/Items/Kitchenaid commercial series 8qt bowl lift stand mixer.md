@@ -21,4 +21,4 @@ dimensions: ""
 
 This stand mixer has been fixture in my kitchen since the early pandemic, churning out 5+ batches of cookie dough, or fifteen pizza crusts at once. I’m loathe to part with it, but it won’t make the voltage conversion to the EU. 
 
-It works perfectly, comes with a dishwasher-safe whisk, paddle, and hook attachment, and an optional sausage-grinder.
+It works perfectly, comes with a dishwasher-safe whisk, paddle, and hook attachment, and an optional sausage-grinder. Also have the original box.
