@@ -12,6 +12,7 @@ photos:
   - IMG_4300
 tags:
   - Wedding
+  - Sold
 relatedItems: ""
 condition: "Used"
 dimensions: ""

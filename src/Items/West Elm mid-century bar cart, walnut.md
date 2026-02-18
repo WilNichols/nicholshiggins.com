@@ -9,6 +9,7 @@ photos:
   - IMG_0310
 tags: 
   - Furniture
+  - Sold
 relatedItems: ""
 condition: "Lightly Used"
 dimensions: "32.4”w x 19.9”d x 32”h"

@@ -11,6 +11,7 @@ photos:
   - IMG_4250
 tags:
   - Kitchen
+  - Sold
 relatedItems: ""
 condition: "Used"
 dimensions: ""

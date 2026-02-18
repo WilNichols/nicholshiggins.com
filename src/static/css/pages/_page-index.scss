@@ -51,6 +51,9 @@ body:has(> .page--index) {
   border-radius: var(--u8);
   overflow: hidden;
   min-width: fit-content;
+  .item--sold & {
+    filter: grayscale(100%);
+  }
 }
 
 .item__photo img {
@@ -106,6 +109,10 @@ body:has(> .page--index) {
 .item__title, .item__price--asking {
   font-size: var(--type-1);
   line-height: 1.25em;
+}
+
+.item--sold .item__title s, .item--sold .item__price--asking  {
+  color: var(--contentSecondaryColor);
 }
 
 .item__link-affordance {

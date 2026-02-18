@@ -26,7 +26,7 @@ Other interested items:
 
 {% endset %}
 
-<div class="page page--item">
+<div class="page page--item {% if tags[2] == 'Sold' %}page--item--sold{% endif %}">
 	<aside class="page--item__photos">
 		<ul class="item-photos">
 		{% for photo in photos %}
@@ -41,22 +41,25 @@ Other interested items:
 			<header class="item-header">
 				<a class="button button--secondary button--square" href="../">&lt;-</a>
 				<div class="item-header__text">
-					<h1 class="item__title--large">{{ page.fileSlug }}</h1>
+					<h1 class="item__title--large">{% if tags[2] == 'Sold' %}Sold! <s>{{ page.fileSlug }}</s>{% else %}{{ page.fileSlug }}{% endif %}</h1>
 					<div class="item__subtitle"><span class="item__availability">Available {{ available | parseAvailableDate }}</span> <span class="item__subtitle__separator">•</span> <span class="item__condition">{{ condition }}</span></div>
 					<div class="item__content__prices">{% if originalPrice %}<s class="item__price--original">$&nbsp;{{ originalPrice }}</s>{% endif %} <span class="item__price--asking">$&nbsp;{{ askingPrice }}</span></div>
 				</div>
 			</header>
 			<main class="item-body">
 				{{ content | safe }}
+				{% if tags[2] !== 'Sold' %}
 				<div class="item-actions">
 				{% if productLink %}<a class="button button--secondary" href="{{ productLink }}" target="blank">View the original listing</a>{% endif %}
 					<a class="button button--primary" href="mailto:{{ meta.email }}?subject={{ ('Buying item ' ~ page.fileSlug) | urlencode }}&body={{ body | urlencode }}">Email to buy</a>
+				</div>
+				{% endif %}
 			</main>
 			<aside class="related">
 				<h2 class="related__title">Related Items</h2>
 				<ul class="related__list">
 				{% for item in collections[tags[1]] %}
-					{% if (item.fileSlug != page.fileSlug) and (loop.index < 6) %}
+					{% if (item.fileSlug != page.fileSlug) and (loop.index < 6) and (item.data.tags[2] != 'Sold') %}
 						<li class="related-item">
 							{{ Card({
 								url: item.page.url,

@@ -6,18 +6,19 @@
   originalPrice: originalPrice,
   askingPrice: askingPrice,
   available: available,
-  compact: false
+  compact: false,
+  tags: []
 }) #}
 
 {% macro Card(props) -%}
-  <a class="item{{ ' item--compact' if props.compact }}" href="{{ props.url }}">
+  <a class="item{{ ' item--compact' if props.compact }}{{ ' item--sold' if props.tags[2] == 'Sold' }}" href="{{ props.url }}">
     <div class="item__photo">
       <img class="item__photo__thumbnail" alt="Photo of {{ props.fileSlug }}" src="{{ env.imgPath }}/{{ props.photo }}.webp?width=256">
     </div>
     <div class="item__content">
       <div class="item__content__leading">
         <span class="item__condition">{{ props.condition }}</span>
-        <h2 class="item__title">{{ props.fileSlug }}</h2>
+        <h2 class="item__title">{% if props.tags[2] == 'Sold' %}Sold! <s>{{ props.fileSlug }}</s>{% else %}{{ props.fileSlug }}{% endif %}</h2>
       </div>
       <div class="item__content__trailing"><s class="item__price--original">{% if props.originalPrice %}$&nbsp;{{ props.originalPrice }}{% endif %}</s> <span class="item__price--asking">$&nbsp;{{ props.askingPrice }}</span></div>
       <div class="item__link-affordance">

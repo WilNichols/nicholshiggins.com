@@ -11,21 +11,37 @@ layout: _root.njk
     {% set tagIndex = collections['tagsList'] | indexOf(tag) %}
     <ul class="categories__list" style="--children: {{ collections['tagsList'] | length }}; --selection: {{ tagIndex }}">
       {% for tag in collections['tagsList'] %}
-        <li class="category-link">
-          {% set url = '' %}
-          {% if tag == 'All Items' %}
-            {% set url = '/' %}
-          {% else %}
-            {% set url = '/' + tag | slugify + '/' %}
-          {% endif %}
-          <a href="{{ url }}">{{ tag }}</a>
-        </li>
+        {% if tag != 'Sold' %}
+          <li class="category-link">
+            {% set url = '' %}
+            {% if tag == 'All Items' %}
+              {% set url = '/' %}
+            {% else %}
+              {% set url = '/' + tag | slugify + '/' %}
+            {% endif %}
+            <a href="{{ url }}">{{ tag }}</a>
+          </li>
+        {% endif %}
       {% endfor %}
       <li class="category-selector"></li>
     </ul>
   </nav>
   <main class="page__items">
     {% for item in collections[tag] | reverse %}
+      {% if item.data.tags[2] != 'Sold' %}
+        {{ Card({
+          url: item.page.url,
+          fileSlug: item.page.fileSlug,
+          photo: item.data.photos[0],
+          condition: item.data.condition,
+          originalPrice: item.data.originalPrice,
+          askingPrice: item.data.askingPrice,
+          available: item.data.available,
+          tags: item.data.tags
+          }) }}
+        {% endif %}
+    {% endfor %}
+    {% for item in collections['Sold'] | reverse %}
       {{ Card({
         url: item.page.url,
         fileSlug: item.page.fileSlug,
@@ -33,7 +49,8 @@ layout: _root.njk
         condition: item.data.condition,
         originalPrice: item.data.originalPrice,
         askingPrice: item.data.askingPrice,
-        available: item.data.available
+        available: item.data.available,
+        tags: item.data.tags
         }) }}
     {% endfor %}
   </main>
