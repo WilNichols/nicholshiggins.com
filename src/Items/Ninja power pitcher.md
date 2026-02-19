@@ -12,6 +12,7 @@ photos:
   - IMG_4243
 tags:
   - Kitchen
+  - Sold
 relatedItems: ""
 condition: "Heavily used"
 dimensions: ""

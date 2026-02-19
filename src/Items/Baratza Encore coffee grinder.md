@@ -8,6 +8,7 @@ photos:
   - IMG_0323
 tags: 
   - Kitchen
+  - Sold
 condition: "Used"
 dimensions: ""
 available: "Now"

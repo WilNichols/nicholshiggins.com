@@ -15,6 +15,7 @@ photos:
   - IMG_4299
 tags:
   - Furniture
+  - Sold
 relatedItems: ""
 condition: "Heavily used"
 dimensions: ""

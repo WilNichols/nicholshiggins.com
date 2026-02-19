@@ -11,6 +11,7 @@ photos:
   - IMG_4336
 tags:
   - Electronics
+  - Sold
 relatedItems: ""
 condition: "Used"
 dimensions: ""

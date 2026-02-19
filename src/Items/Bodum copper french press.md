@@ -10,6 +10,7 @@ photos:
   - IMG_4253
 tags:
   - Kitchen
+  - Sold
 relatedItems: ""
 condition: "Lightly used"
 dimensions: ""

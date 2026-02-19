@@ -9,6 +9,7 @@ photos:
   - IMG_0303
 tags: 
   - Furniture
+  - Sold
 relatedItems: ""
 condition: "Lightly Used"
 dimensions: "34”w x 12”d x 32”h"

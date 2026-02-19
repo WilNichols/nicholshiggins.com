@@ -10,6 +10,7 @@ photos:
   - IMG_4317
 tags:
   - Electronics
+  - Sold
 relatedItems: ""
 condition: "Lightly used"
 dimensions: ""
