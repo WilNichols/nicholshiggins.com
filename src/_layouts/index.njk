@@ -9,7 +9,7 @@ layout: _root.njk
   </div>
   <nav class="categories">
     {% set tagIndex = collections['tagsList'] | indexOf(tag) %}
-    <ul class="categories__list" style="--children: {{ collections['tagsList'] | length }}; --selection: {{ tagIndex }}">
+    <ul class="categories__list" style="--children: {{ (collections['tagsList'] | length) - 1 }}; --selection: {{ tagIndex }}">
       {% for tag in collections['tagsList'] %}
         {% if tag != 'Sold' %}
           <li class="category-link">
