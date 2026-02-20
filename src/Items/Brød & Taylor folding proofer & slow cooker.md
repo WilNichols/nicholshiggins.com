@@ -10,7 +10,7 @@ photos:
   - IMG_4230
 tags:
   - Kitchen
-  - Sol
+  - Sold
 relatedItems: ""
 condition: "Lighly Used"
 dimensions: ""
