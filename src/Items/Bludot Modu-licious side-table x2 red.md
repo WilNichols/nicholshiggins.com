@@ -12,6 +12,7 @@ photos:
   - IMG_4309
 tags:
   - Furniture
+  - Sold
 relatedItems: ""
 condition: "Used"
 dimensions: ""

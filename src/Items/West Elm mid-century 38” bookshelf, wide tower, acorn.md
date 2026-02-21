@@ -9,6 +9,7 @@ photos:
   - IMG_0305
 tags: 
   - Furniture
+  - Sold
 relatedItems: ""
 condition: "Lightly Used"
 dimensions: "38”w x 15”d x 70.25”h"
