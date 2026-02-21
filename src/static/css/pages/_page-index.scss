@@ -90,9 +90,8 @@ body:has(> .page--index) {
   text-align: right;
 }
 
-.item__condition {
+.item .item__meta {
   font-size: var(--type--1);
-  color: var(--contentSecondaryColor);
 }
 
 .item__price--original {
@@ -147,7 +146,7 @@ body:has(> .page--index) {
       width: var(--u48);
       height: var(--u48);
     }
-    .item__condition,
+    .item__meta,
     .item__link-affordance,
     .item__price--original:empty {
       display: none;

@@ -16,7 +16,7 @@
 body:has(> .page--item) {
   padding: var(--col);
   @media(width < 720px) {
-    padding: 0;
+    padding: 0 !important;
   }
 }
 
@@ -147,12 +147,13 @@ body:has(> .page--item) {
   }
 }
 
-.item__subtitle__separator {
+.item__meta__separator {
   color: var(--contentTertiaryColor);
 }
 
-.item__subtitle > * {
+.item__meta {
   font-size: var(--type-0);
+  color: var(--contentSecondaryColor);
 }
 
 .item__content__prices,

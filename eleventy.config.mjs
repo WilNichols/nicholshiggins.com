@@ -42,6 +42,15 @@ export default async function(eleventyConfig) {
     })
   });
   
+  eleventyConfig.addFilter("shortDate", (date) => {
+    const parsedDate = new Date(date);
+    return parsedDate.toLocaleDateString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric"
+    })
+  });
+
   eleventyConfig.addFilter("indexOf", (arr, value) => {
     return arr.indexOf(value);
   });

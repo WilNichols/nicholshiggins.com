@@ -3,6 +3,7 @@
   fileSlug: fileSlug,
   photo: photo,
   condition: condition, 
+  date: date,
   originalPrice: originalPrice,
   askingPrice: askingPrice,
   available: available,
@@ -17,7 +18,7 @@
     </div>
     <div class="item__content">
       <div class="item__content__leading">
-        <span class="item__condition">{{ props.condition }}</span>
+        <div class="item__meta">{{ props.condition }} <span class="item__meta__separator">•</span> Added {{ props.date | shortDate }}</div>
         <h2 class="item__title">{% if props.tags[2] == 'Sold' %}Sold! <s>{{ props.fileSlug }}</s>{% else %}{{ props.fileSlug }}{% endif %}</h2>
       </div>
       <div class="item__content__trailing"><s class="item__price--original">{% if props.originalPrice %}$&nbsp;{{ props.originalPrice }}{% endif %}</s> <span class="item__price--asking">$&nbsp;{{ props.askingPrice }}</span></div>
