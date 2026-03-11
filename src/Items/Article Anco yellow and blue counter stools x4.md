@@ -4,7 +4,7 @@ available: "Now"
 originallyPurchased: ""
 purchasePrice: "119 x 4"
 originalPrice: "119 x 4"
-askingPrice: "60 x 4"
+askingPrice: "50 x 4"
 photos:
   - IMG_4272
 tags:
@@ -14,4 +14,4 @@ condition: "Lightly used"
 dimensions: ""
 ---
 
-These stools are sturdy, and but their seats detach to sas to make moving easy. They don’t hold onto stains or liquid and easily clean off after kitchen spills.
+These stools are sturdy, and but their seats detach so as to make moving easy. They don’t hold onto stains or liquid and easily clean off after kitchen spills.

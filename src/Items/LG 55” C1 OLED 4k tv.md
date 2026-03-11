@@ -4,7 +4,7 @@ available: "3/16/2026"
 originallyPurchased: ""
 purchasePrice: ""
 originalPrice: "1120.00"
-askingPrice: "600.00"
+askingPrice: "500.00"
 photos:
   - IMG_4193
 tags:

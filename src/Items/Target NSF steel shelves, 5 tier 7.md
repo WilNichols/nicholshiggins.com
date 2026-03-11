@@ -10,6 +10,7 @@ photos:
   - IMG_4195
 tags:
   - Furniture
+  - Sold
 relatedItems: ""
 condition: "Used"
 dimensions: ""

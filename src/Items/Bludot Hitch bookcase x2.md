@@ -4,7 +4,7 @@ available: "Now"
 originallyPurchased: ""
 purchasePrice: "795 x 2"
 originalPrice: "795 x 2"
-askingPrice: "200 x 2"
+askingPrice: "150 x 2"
 photos:
   - IMG_4260
   - IMG_4262

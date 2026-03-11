@@ -10,6 +10,7 @@ photos:
   - IMG_4264
 tags:
   - Furniture
+  - Sold
 relatedItems: ""
 condition: "Used"
 dimensions: ""

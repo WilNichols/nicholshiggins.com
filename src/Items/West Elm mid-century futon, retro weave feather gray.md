@@ -4,7 +4,7 @@ available: "Now"
 originallyPurchased: ""
 purchasePrice: ""
 originalPrice: "850.00"
-askingPrice: "400.00"
+askingPrice: "300.00"
 photos:
   - IMG_4328
   - IMG_4330
